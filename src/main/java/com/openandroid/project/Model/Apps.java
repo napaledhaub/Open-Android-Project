@@ -1,4 +1,4 @@
-package com.openandroid.project;
+package com.openandroid.project.model;
 
 import jakarta.persistence.*;
 import lombok.Getter;
