@@ -5,12 +5,11 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.time.LocalDateTime;
-import java.time.LocalTime;
 
 @Entity
 @Getter
 @Setter
-public class Apps {
+public class Category {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="id")
@@ -19,12 +18,12 @@ public class Apps {
     @Column(name="name")
     private String name;
 
-    @Column(name="status")
-    private String status;
+    @Column(name="description")
+    private String description;
 
     @Column(name="last_update")
     private LocalDateTime lastupdate;
 
-    @ManyToOne
-    private Category category;
+    @OneToMany
+    private Apps apps;
 }
