@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.mail.MessagingException;
+
 @RestController
 @RequestMapping("/auth")
 public class AuthenticationController {
@@ -17,8 +19,8 @@ public class AuthenticationController {
     @PostMapping("/register")
     public ResponseEntity<String> register(@RequestBody DtoRegisterRequest dtoRegisterRequest) {
         try {
-            String subject = "Konfirmasi Pendaftaran";
-            String text = "Terima kasih atas pendaftaran Anda di pusat kebugaran kami. Berikut Nomor OTP untuk megaktifkan akun Anda:";
+            String subject = "Registration Confirmation";
+            String text = "Welcome developers, what a glorious privilege of yours to be a dev. Enter this OTP to activate your account:";
             String verificationCode = emailService.sendEmail(dtoRegisterRequest.getEmail(), subject, text);
             registrationService.register(dtoRegisterRequest, verificationCode);
         } catch (MessagingException e) {

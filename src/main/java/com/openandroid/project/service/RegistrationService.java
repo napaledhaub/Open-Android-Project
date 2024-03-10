@@ -1,9 +1,11 @@
 package com.openandroid.project.service;
 
 import com.openandroid.project.dto.DtoRegisterRequest;
+import com.openandroid.project.model.Developer;
 import com.openandroid.project.repository.IAuthTokenRepository;
 import com.openandroid.project.repository.IDeveloperRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import javax.crypto.Cipher;
 import javax.crypto.KeyGenerator;
@@ -39,7 +41,7 @@ public class RegistrationService {
 
         participant.setCreditCardInfo(creditCardInfo);
 
-        participantRepository.save(participant);
+        developerRepository.save(developer);
 
         return verificationCode;
     }
