@@ -31,11 +31,11 @@ Before you begin, ensure you have the following installed:
 
 ## 📄 Documentation
 
-For detailed API documentation, please refer to the [API Docs](link-to-your-api-docs).
+For detailed API documentation, please refer to the [API Docs](napaledhaub.github.io).
 
 ## 🙌 Contributing
 
-Contributions are welcome! Please read our [Contributing Guidelines](link-to-your-contributing-guidelines) for more details.
+Contributions are welcome! Please read our [Contributing Guidelines](napaledhaub.github.io) for more details.
 
 ## 📧 Contact
 
